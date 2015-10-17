@@ -15,6 +15,10 @@ public class Weapons : MonoBehaviour {
     public GameObject turretTwo;
     public GameObject turretThree;
 
+    public GameObject fireOne;
+    public GameObject fireTwo;
+    public GameObject fireThree;
+
     public double shotTime;
     double nextShotOne = -1;
     double nextShotTwo = -1;
@@ -59,13 +63,14 @@ public class Weapons : MonoBehaviour {
                 angle = -angle;
                 Debug.Log("fix");
             }
+            angle += 90;
             turretOne.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             if (nextShotOne <= 0)
             {
                 nextShotOne = shotTime;
                 //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Blue"), turretOne.transform.position, turretOne.transform.rotation) as GameObject;
+                GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
                 shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
             }
         }
@@ -79,13 +84,14 @@ public class Weapons : MonoBehaviour {
                 angle = -angle;
                 Debug.Log("fix");
             }
+            angle += 90;
             turretTwo.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             if (nextShotTwo <= 0)
             {
                 nextShotTwo = shotTime;
                 //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Blue"), turretTwo.transform.position, turretTwo.transform.rotation) as GameObject;
+                GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
                 shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
             }
         }
@@ -99,13 +105,14 @@ public class Weapons : MonoBehaviour {
                 angle = -angle;
                 Debug.Log("fix");
             }
+            angle += 90;
             turretThree.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             if (nextShotThree <= 0)
             {
                 nextShotThree = shotTime;
                 //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Blue"), turretThree.transform.position, turretThree.transform.rotation) as GameObject;
+                GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
                 shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
             }
         }
