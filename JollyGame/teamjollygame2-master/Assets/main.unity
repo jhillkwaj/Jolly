@@ -821,6 +821,9 @@ MonoBehaviour:
   turretOne: {fileID: 1820887881}
   turretTwo: {fileID: 1014281847}
   turretThree: {fileID: 911954186}
+  fireOne: {fileID: 0}
+  fireTwo: {fileID: 0}
+  fireThree: {fileID: 0}
   shotTime: .5
   maxVSpeed: 6
   bigLaserCooldown: 5

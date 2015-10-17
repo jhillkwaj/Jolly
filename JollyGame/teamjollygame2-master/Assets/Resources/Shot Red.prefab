@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11425372}
   - 61: {fileID: 6168970}
   m_Layer: 0
-  m_Name: Shot Blue
+  m_Name: Shot Red
   m_TagString: BossShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
