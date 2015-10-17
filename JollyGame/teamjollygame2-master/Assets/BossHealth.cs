@@ -21,13 +21,14 @@ public class BossHealth : MonoBehaviour {
         if (other.gameObject.tag == "HeroShot")
         {
             takeDamage(10);
+            Destroy(other.gameObject);
         }
 
         //play impact sound effect
 
         //impact particle effect
 
-        Destroy(other.gameObject);
+        
     }
 
     void takeDamage(int damage)

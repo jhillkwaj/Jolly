@@ -1,26 +1,18 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: a8ecef76f55ea63448d3b7ee2cadd7ac
-timeCreated: 1445114818
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
-=======
-guid: b8b91f26c4b1cc44693acafbe2ceb6d6
-timeCreated: 1445115917
+timeCreated: 1445119467
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: GreenLaser
     21300002: YellowLaser
-    21300004: BigShipTurret
+    21300004: BigTurret
     21300006: BigShip_2
     21300008: SmallShip
     21300010: RedLaser
     21300012: BigShip_3
     21300014: BigShip_1
     21300016: BlueLaser
->>>>>>> c1d387c39cfb3b5610df8ea4220cead24b5aace0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -43,19 +35,11 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-<<<<<<< HEAD
-  textureFormat: -1
-  maxTextureSize: 2048
-  textureSettings:
-    filterMode: -1
-    aniso: -1
-=======
   textureFormat: -3
   maxTextureSize: 8192
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: 16
->>>>>>> c1d387c39cfb3b5610df8ea4220cead24b5aace0
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -63,11 +47,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> c1d387c39cfb3b5610df8ea4220cead24b5aace0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -78,9 +58,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - name: GreenLaser
       rect:
@@ -102,7 +79,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BigShipTurret
+    - name: BigTurret
       rect:
         serializedVersion: 2
         x: 1082
@@ -110,7 +87,7 @@ TextureImporter:
         width: 82
         height: 460
       alignment: 9
-      pivot: {x: .5, y: .92117095}
+      pivot: {x: .50000149, y: .936021328}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BigShip_2
       rect:
@@ -135,7 +112,7 @@ TextureImporter:
     - name: RedLaser
       rect:
         serializedVersion: 2
-        x: 417
+        x: 413
         y: 1240
         width: 79
         height: 362
@@ -172,7 +149,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> c1d387c39cfb3b5610df8ea4220cead24b5aace0
   spritePackingTag: 
   userData: 
   assetBundleName: 
