@@ -8,8 +8,7 @@ public class HeroController : MonoBehaviour
 
 	void Start ()
 	{
-		string playerNumberString = this.name.Substring(this.name.Length-2, 1);
-		this.PlayerNumber = int.Parse(playerNumberString);
+
 	}
 
 	public InputDevice InputDevice
@@ -42,16 +41,25 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    public bool Shooting
+    public float RightAxisX
 	{
 		get
 		{
 			InputDevice inputDevice = this.InputDevice;
-			return (inputDevice != null) ? inputDevice.Action3.WasPressed : (this.PlayerNumber == 1 ? Input.GetButtonDown ("Fire3") : false);
+			return (inputDevice != null) ? inputDevice.RightStickX: 0.0f;
 		}
 	}
 
-	public bool Stomping
+    public float RightAxisY
+    {
+        get
+        {
+            InputDevice inputDevice = this.InputDevice;
+            return (inputDevice != null) ? inputDevice.RightStickY : 0.0f;
+        }
+    }
+
+    public bool Stomping
 	{
 		get
 		{

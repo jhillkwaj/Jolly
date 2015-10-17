@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Update " + this.HeroController.HorizontalMovementAxis);
         this.transform.position = new Vector3(this.transform.position.x + (this.HeroController.HorizontalMovementAxis * maxHSpeed * Time.deltaTime)
             , this.transform.position.y + (this.HeroController.VerticalMovementAxis * maxVSpeed * Time.deltaTime), 0);
     }
