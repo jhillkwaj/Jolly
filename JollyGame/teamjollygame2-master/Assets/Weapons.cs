@@ -7,15 +7,21 @@ public class Weapons : MonoBehaviour {
 
     public GameObject turretOne;
 
+    public double shotTime;
+    double nextShot = -1;
+
     // Use this for initialization
     void Start () {
         this.HeroController = this.GetComponent<HeroController>();
+        nextShot = shotTime;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if(this.HeroController.RightAxisX != 0 || this.HeroController.RightAxisY != 0)
+        nextShot -= Time.deltaTime;
+        if(nextShot <= 0 && (this.HeroController.RightAxisX != 0 || this.HeroController.RightAxisY != 0))
         {
+            nextShot = shotTime;
             Vector2 vector = new Vector2(HeroController.RightAxisX, HeroController.RightAxisY);
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
             if (vector.y < 0)
