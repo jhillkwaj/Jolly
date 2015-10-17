@@ -8,6 +8,7 @@ public class SpawnShot : MonoBehaviour {
 
     void Start()
     {
+        transform.Rotate(Vector3.forward * -90);
         nextShot = shotTime;
     }
     
@@ -25,6 +26,7 @@ public class SpawnShot : MonoBehaviour {
     private void fireShot()
     {
         GameObject shot = Instantiate(Resources.Load("shot"), this.transform.position, this.transform.rotation) as GameObject;
+
         shot.GetComponent<MoveLaser>().velocity = Vector3.right * 10;
     }
 }
