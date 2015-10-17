@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 18.3999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483150}
@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a9d0adc14557f47ae4eabcdbec5f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: .25
-  tileSizeZ: 30
+  scrollSpeed: 2
+  tileSizeZ: 80
 --- !u!198 &19832136
 ParticleSystem:
   m_ObjectHideFlags: 1

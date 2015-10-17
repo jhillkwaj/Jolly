@@ -59,12 +59,12 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    public bool Stomping
+    public bool FireBig
 	{
 		get
 		{
 			InputDevice inputDevice = this.InputDevice;
-			return (inputDevice != null) ? inputDevice.Action1.WasReleased : (this.PlayerNumber == 1 ? Input.GetButtonUp ("Fire1") : false);
+			return (inputDevice != null) ? inputDevice.LeftTrigger: (this.PlayerNumber == 1 ? Input.GetButtonUp ("Fire1") : false);
 		}
 	}
 

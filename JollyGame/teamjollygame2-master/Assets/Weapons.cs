@@ -22,12 +22,18 @@ public class Weapons : MonoBehaviour {
 
     public float maxVSpeed = 6.0f;
 
+    public float bigLaserCooldown;
+    float bigLaserTime = 0;
+    bool bigLaserOn = false;
+    public GameObject bigLaser;
+
     // Use this for initialization
     void Start () {
         this.HeroControllerOne = HeroOne.GetComponent<HeroController>();
         this.HeroControllerTwo = HeroTwo.GetComponent<HeroController>();
         this.HeroControllerThree = HeroThree.GetComponent<HeroController>();
         nextShotOne = nextShotTwo = nextShotThree = shotTime;
+        bigLaserTime = bigLaserCooldown;
     }
 	
 	// Update is called once per frame
@@ -35,12 +41,16 @@ public class Weapons : MonoBehaviour {
         nextShotOne -= Time.deltaTime;
         nextShotTwo -= Time.deltaTime;
         nextShotThree -= Time.deltaTime;
+        bigLaserTime -= Time.deltaTime;
 
         //move the ship
-        this.transform.position = new Vector3(this.transform.position.x
-            , this.transform.position.y + (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed/3) * Time.deltaTime), 0);
+        if (!bigLaserOn && !HeroControllerOne.FireBig && !HeroControllerTwo.FireBig && !HeroControllerThree.FireBig)
+            this.transform.position = new Vector3(this.transform.position.x
+                , this.transform.position.y + (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed/3) * Time.deltaTime)
+                + (this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime)
+                + (this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime), 0);
 
-        if ((this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
+        if (!HeroControllerOne.FireBig && (this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerOne.RightAxisX, HeroControllerOne.RightAxisY);
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
@@ -60,7 +70,7 @@ public class Weapons : MonoBehaviour {
             }
         }
 
-        if ((this.HeroControllerTwo.RightAxisX != 0 || this.HeroControllerTwo.RightAxisY != 0))
+        if (!HeroControllerTwo.FireBig && (this.HeroControllerTwo.RightAxisX != 0 || this.HeroControllerTwo.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerTwo.RightAxisX, HeroControllerTwo.RightAxisY);
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
@@ -80,7 +90,7 @@ public class Weapons : MonoBehaviour {
             }
         }
 
-        if ((this.HeroControllerThree.RightAxisX != 0 || this.HeroControllerThree.RightAxisY != 0))
+        if (!HeroControllerThree.FireBig && (this.HeroControllerThree.RightAxisX != 0 || this.HeroControllerThree.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerThree.RightAxisX, HeroControllerThree.RightAxisY);
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
@@ -99,5 +109,20 @@ public class Weapons : MonoBehaviour {
                 shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
             }
         }
+
+        if (bigLaserTime < 0)
+        {
+            if(bigLaserOn)
+            {
+                bigLaser.SetActive(false);
+                bigLaserTime = bigLaserCooldown;
+            }
+            else if(HeroControllerOne.FireBig && HeroControllerTwo.FireBig && HeroControllerThree.FireBig)
+            {
+                bigLaser.SetActive(true);
+                bigLaserTime = 5;
+            }
+        }
+            Debug.Log("fire big");
     }
 }
