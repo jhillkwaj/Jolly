@@ -116,13 +116,15 @@ public class Weapons : MonoBehaviour {
             {
                 bigLaser.SetActive(false);
                 bigLaserTime = bigLaserCooldown;
+                bigLaserOn = false;
             }
             else if(HeroControllerOne.FireBig && HeroControllerTwo.FireBig && HeroControllerThree.FireBig)
             {
                 bigLaser.SetActive(true);
-                bigLaserTime = 5;
+                bigLaserTime = 2;
+                bigLaserOn = true;
             }
         }
-            Debug.Log("fire big");
+            
     }
 }

@@ -949,7 +949,7 @@ MonoBehaviour:
   turretThree: {fileID: 911954186}
   shotTime: .5
   maxVSpeed: 6
-  bigLaserCooldown: 5
+  bigLaserCooldown: 20
   bigLaser: {fileID: 1844501151}
 --- !u!50 &1889159921
 Rigidbody2D:
