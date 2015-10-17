@@ -24,6 +24,9 @@ public class Slow : MonoBehaviour
             Destroy(other);
             movementScript.maxVSpeed = movementScript.maxVSpeed / 2;
             movementScript.maxHSpeed = movementScript.maxHSpeed / 2;
+        }else if(other.gameObject.tag == "BigShot")
+        {
+            Destroy(this.gameObject);
         }
     }
 
