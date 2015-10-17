@@ -33,16 +33,16 @@ public class HeroController : MonoBehaviour
 		}
 	}
 
-	public bool Jump
-	{
-		get
-		{
-			InputDevice inputDevice = this.InputDevice;
-			return (inputDevice != null) ? inputDevice.Action1.WasPressed : (this.PlayerNumber == 1 ? Input.GetButtonDown ("Fire1") : false);
-		}
-	}
+    public float VerticalMovementAxis
+    {
+        get
+        {
+            InputDevice inputDevice = this.InputDevice;
+            return (inputDevice != null) ? inputDevice.LeftStickY : (this.PlayerNumber == 1 ? Input.GetAxis("Vertical") : 0.0f);
+        }
+    }
 
-	public bool Shooting
+    public bool Shooting
 	{
 		get
 		{

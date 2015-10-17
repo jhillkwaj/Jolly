@@ -174,7 +174,7 @@ public class Hero : MonoBehaviour
 
 	void Update ()
 	{
-		if (this.RespawnTimeLeft > 0.0f)
+		/*if (this.RespawnTimeLeft > 0.0f)
 		{
 			this.transform.position = new Vector3(0.0f, -20.0f, 0.0f);
 
@@ -293,7 +293,7 @@ public class Hero : MonoBehaviour
 				this.StartChannelGrow();
 				this.velocity = new Vector2 (0.0f, this.velocity.y);
 			}
-		}
+		}*/
 
 	}
 
