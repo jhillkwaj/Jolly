@@ -20,6 +20,8 @@ public class Weapons : MonoBehaviour {
     double nextShotTwo = -1;
     double nextShotThree = -1;
 
+    public float maxVSpeed = 6.0f;
+
     // Use this for initialization
     void Start () {
         this.HeroControllerOne = HeroOne.GetComponent<HeroController>();
@@ -33,6 +35,10 @@ public class Weapons : MonoBehaviour {
         nextShotOne -= Time.deltaTime;
         nextShotTwo -= Time.deltaTime;
         nextShotThree -= Time.deltaTime;
+
+        //move the ship
+        this.transform.position = new Vector3(this.transform.position.x
+            , this.transform.position.y + (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed/3) * Time.deltaTime), 0);
 
         if ((this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
         {
