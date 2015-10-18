@@ -19,6 +19,9 @@ public class Weapons : MonoBehaviour {
     public GameObject fireTwo;
     public GameObject fireThree;
 
+    public SpriteRenderer overheatingEffect;
+    float overheatingAlpha = 1;
+
     public double shotTime;
     double nextShotOne = -1;
     double nextShotTwo = -1;
@@ -176,9 +179,11 @@ public class Weapons : MonoBehaviour {
 
         if (bigLaserTime < 0)
         {
+            bigLaserTime = 0;
             bool charged1 = chargeTime1 <= 0;
             bool charged2 = chargeTime2 <= 0;
             bool charged3 = chargeTime3 <= 0;
+            overheatingAlpha = 0;
 
             if (bigLaserOn)
             {
@@ -187,7 +192,7 @@ public class Weapons : MonoBehaviour {
                 bigLaserOn = false;
                 gitLaserObj.SetActive(false);
             }
-            else if (charged1 && charged2 && charged3)
+            else if (charged1 || charged2 && charged3)
             {
                 bigLaser.Play();
                 chargeParticles1.Stop();
@@ -201,6 +206,17 @@ public class Weapons : MonoBehaviour {
                 gitLaserObj.SetActive(true);
             }
         }
-            
+        else
+        {
+            if (bigLaserOn)
+                overheatingAlpha = (2.5f-bigLaserTime) / 2.5f;
+            else //on cooldown
+                overheatingAlpha = bigLaserTime / bigLaserCooldown;
+        }
+
+        Color newColor = overheatingEffect.color;
+        newColor.a = overheatingAlpha;
+        overheatingEffect.color = newColor;
+
     }
 }
