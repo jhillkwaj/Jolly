@@ -141,10 +141,10 @@ public class Weapons : MonoBehaviour {
         //move the ship
         if (!bigLaserOn)
         {
-            float moveOne = (HeroControllerOne.FireBig ? 0 : this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
-            float moveTwo = (HeroControllerTwo.FireBig ? 0 : this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
-            float moveThree = (HeroControllerTwo.FireBig ? 0 : this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
-            this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(moveOne + moveTwo + moveThree, -14.25f, 14.25f), 0);
+            float moveOne = (HeroControllerOne.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            float moveTwo = (HeroControllerTwo.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            float moveThree = (HeroControllerThree.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + Mathf.Clamp(moveOne + moveTwo + moveThree, -14.25f, 14.25f), 0);
         }
 
         if (!HeroControllerOne.FireBig && (this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
