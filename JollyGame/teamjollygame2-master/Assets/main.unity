@@ -1209,6 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   die: {fileID: 2025281589}
   removeOnDie: {fileID: 2058618885}
+  winObj: {fileID: 0}
   death: 0
 --- !u!1 &1549066043
 GameObject:
@@ -1363,7 +1364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400832, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.44242477
+      value: -2.5999999
       objectReference: {fileID: 0}
     - target: {fileID: 400832, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1423,7 +1424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400832, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
       propertyPath: m_LocalScale.x
-      value: 10.0926666
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400832, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
       propertyPath: m_LocalScale.y
@@ -1538,6 +1539,7 @@ MonoBehaviour:
   fireOne: {fileID: 1727904}
   fireTwo: {fileID: 339321763}
   fireThree: {fileID: 550082942}
+  overheatingEffect: {fileID: 2112244887}
   shotTime: .5
   timeToCharge: 3
   maxVSpeed: 6
@@ -1585,6 +1587,8 @@ MonoBehaviour:
   startingHealth: 2000
   currentHealth: 0
   healthSlider: {fileID: 865661655}
+  healthSliderObject: {fileID: 0}
+  win: {fileID: 0}
   showOnDeath: {fileID: 1393549355}
   hideOnDeath: {fileID: 2051563302}
 --- !u!1 &1891381613
@@ -2309,3 +2313,57 @@ PolygonCollider2D:
       - {x: .605000019, y: -3.66499996}
       - {x: .694999993, y: -3.58500004}
       - {x: .875, y: -3.2650001}
+--- !u!1 &2112244885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2112244886}
+  - 212: {fileID: 2112244887}
+  m_Layer: 0
+  m_Name: overheating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2112244886
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112244885}
+  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106709}
+  m_LocalPosition: {x: .0540000014, y: .0419999994, z: 0}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .0500000007}
+  m_Children: []
+  m_Father: {fileID: 1851433646}
+  m_RootOrder: 5
+--- !u!212 &2112244887
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112244885}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 3890fd85f3f6dc948ba7fec606c59c90, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
