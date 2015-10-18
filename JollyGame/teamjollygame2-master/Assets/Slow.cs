@@ -33,6 +33,9 @@ public class Slow : MonoBehaviour
             movementScript.maxVSpeed = movementScript.maxVSpeed / 1.8f;
             movementScript.maxHSpeed = movementScript.maxHSpeed / 1.8f;
             hitSound.Play();
+            GameObject hitEffect = Instantiate(Resources.Load("HitParticles"), other.transform.position, other.transform.rotation) as GameObject;
+            hitEffect.transform.parent = transform;
+            Destroy(hitEffect, 3);
         } else if (other.gameObject.tag == "BigShot" || death == true)
         {
             removeOnDie.SetActive(false);
@@ -45,6 +48,9 @@ public class Slow : MonoBehaviour
             movementScript.maxVSpeed = 0;
             movementScript.maxHSpeed = 0;
             hitSound.Play();
+            GameObject hitEffect = Instantiate(Resources.Load("HitParticles"), other.transform.position, other.transform.rotation) as GameObject;
+            hitEffect.transform.parent = transform;
+            Destroy(hitEffect, 3);
         }
     }
 
