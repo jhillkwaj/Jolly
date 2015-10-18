@@ -8,6 +8,7 @@ public class BossHealth : MonoBehaviour {
     public int currentHealth;
     public Slider healthSlider;
     public GameObject showOnDeath;
+    public GameObject hideOnDeath;
 
     bool inDeath = false;
     float deathTime = -1;
@@ -48,11 +49,12 @@ public class BossHealth : MonoBehaviour {
             showOnDeath.SetActive(true);
             inDeath = true;
             deathTime = 2.0f;
+            Destroy(healthSlider);
         }
     }
 
     void die()
     {
-        Destroy(this.gameObject);
+        Destroy(this.hideOnDeath);
     }
 }
