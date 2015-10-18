@@ -7,6 +7,7 @@ public class BossHealth : MonoBehaviour {
     public int currentHealth;
 
     public GameObject showOnDeath;
+    public GameObject removeOnDeath;
 
     bool inDeath = false;
     float deathTime = -1;
@@ -52,6 +53,6 @@ public class BossHealth : MonoBehaviour {
 
     void die()
     {
-        Destroy(this.gameObject);
+        Destroy(removeOnDeath);
     }
 }
