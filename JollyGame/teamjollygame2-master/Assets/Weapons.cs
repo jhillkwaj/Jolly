@@ -184,7 +184,7 @@ public class Weapons : MonoBehaviour {
                 bigLaserTime = bigLaserCooldown;
                 bigLaserOn = false;
             }
-            else if (charged1 && charged2 && charged3 || charged1)
+            else if (charged1 && charged2 && charged3)
             {
                 bigLaser.Play();
                 chargeParticles1.Stop();
