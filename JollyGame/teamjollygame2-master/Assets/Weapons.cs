@@ -24,6 +24,12 @@ public class Weapons : MonoBehaviour {
     double nextShotTwo = -1;
     double nextShotThree = -1;
 
+    public double timeToCharge = 3;
+
+    double chargeTime1 = 0;
+    double chargeTime2 = 0;
+    double chargeTime3 = 0;
+
     Vector2 lastRot1 = new Vector2(0, 0);
     Vector2 lastRot2 = new Vector2(0, 0);
     Vector2 lastRot3 = new Vector2(0, 0);
@@ -33,7 +39,13 @@ public class Weapons : MonoBehaviour {
     public float bigLaserCooldown;
     float bigLaserTime = 0;
     bool bigLaserOn = false;
+
+    public ParticleSystem chargeParticles1;
+    public ParticleSystem chargeParticles2;
+    public ParticleSystem chargeParticles3;
+
     public ParticleSystem bigLaser;
+
 
     // Use this for initialization
     void Start () {
@@ -42,6 +54,9 @@ public class Weapons : MonoBehaviour {
         this.HeroControllerThree = HeroThree.GetComponent<HeroController>();
         nextShotOne = nextShotTwo = nextShotThree = shotTime;
         bigLaserTime = bigLaserCooldown;
+        chargeTime1 = 0;
+        chargeTime2 = 0;
+        chargeTime3 = 0;
     }
 	
 	// Update is called once per frame
@@ -121,18 +136,64 @@ public class Weapons : MonoBehaviour {
             shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 10;
         }
 
+        if (HeroControllerOne.FireBig && bigLaserTime < 0)
+        {
+            if (chargeTime1 == timeToCharge)
+                chargeParticles1.Play();
+            chargeTime1 -= Time.deltaTime;
+        }
+        else
+        {
+            chargeTime1 = timeToCharge;
+            chargeParticles1.Stop();
+        }
+
+        if (HeroControllerTwo.FireBig && bigLaserTime < 0)
+        {
+            if (chargeTime2 == timeToCharge)
+                chargeParticles2.Play();
+            chargeTime2 -= Time.deltaTime;
+        }
+        else
+        {
+            chargeTime2 = timeToCharge;
+            chargeParticles2.Stop();
+        }
+
+        if (HeroControllerThree.FireBig && bigLaserTime < 0)
+        {
+            if (chargeTime3 == timeToCharge)
+                chargeParticles3.Play();
+            chargeTime3 -= Time.deltaTime;
+        }
+        else
+        {
+            chargeTime3 = timeToCharge;
+            chargeParticles3.Stop();
+        }
+
         if (bigLaserTime < 0)
         {
-            if(bigLaserOn)
+            bool charged1 = chargeTime1 <= 0;
+            bool charged2 = chargeTime2 <= 0;
+            bool charged3 = chargeTime3 <= 0;
+
+            if (bigLaserOn)
             {
                 bigLaser.Stop();
                 bigLaserTime = bigLaserCooldown;
                 bigLaserOn = false;
             }
-            else if(HeroControllerOne.FireBig && HeroControllerTwo.FireBig && HeroControllerThree.FireBig || HeroControllerOne.FireBig)
+            else if (charged1 && charged2 && charged3 || charged1)
             {
                 bigLaser.Play();
-                bigLaserTime = 2;
+                chargeParticles1.Stop();
+                chargeParticles1.Clear();
+                chargeParticles2.Stop();
+                chargeParticles2.Clear();
+                chargeParticles3.Stop();
+                chargeParticles3.Clear();
+                bigLaserTime = 2.5f;
                 bigLaserOn = true;
             }
         }

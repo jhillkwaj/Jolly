@@ -409,6 +409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 3
+--- !u!198 &994638635 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19849916, guid: ba315a0bfb2af2b49a5b9d55b7a3c670,
+    type: 2}
+  m_PrefabInternal: {fileID: 1861049510}
 --- !u!1 &1014281847
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +482,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 2
+--- !u!198 &1021209196 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19870288, guid: ba315a0bfb2af2b49a5b9d55b7a3c670,
+    type: 2}
+  m_PrefabInternal: {fileID: 1861049510}
 --- !u!1001 &1100956794
 Prefab:
   m_ObjectHideFlags: 0
@@ -639,6 +649,11 @@ Transform:
   - {fileID: 1889159917}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!198 &1569063781 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19804718, guid: ba315a0bfb2af2b49a5b9d55b7a3c670,
+    type: 2}
+  m_PrefabInternal: {fileID: 1861049510}
 --- !u!1 &1628576629
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +886,18 @@ Prefab:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19870288, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849916, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19804718, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
   m_IsPrefabParent: 0
@@ -945,8 +972,12 @@ MonoBehaviour:
   fireTwo: {fileID: 339321763}
   fireThree: {fileID: 550082942}
   shotTime: .5
+  timeToCharge: 3
   maxVSpeed: 6
   bigLaserCooldown: 5
+  chargeParticles1: {fileID: 1021209196}
+  chargeParticles2: {fileID: 994638635}
+  chargeParticles3: {fileID: 1569063781}
   bigLaser: {fileID: 1697463299}
 --- !u!50 &1889159921
 Rigidbody2D:
