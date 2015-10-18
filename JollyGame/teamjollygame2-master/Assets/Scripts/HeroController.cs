@@ -68,7 +68,16 @@ public class HeroController : MonoBehaviour
 		}
 	}
 
-	public bool GetBiggerStart
+    public bool Fire
+    {
+        get
+        {
+            InputDevice inputDevice = this.InputDevice;
+            return (inputDevice != null) ? inputDevice.RightTrigger : (this.PlayerNumber == 1 ? Input.GetButtonUp("Fire2") : false);
+        }
+    }
+
+    public bool GetBiggerStart
 	{
 		get
 		{
