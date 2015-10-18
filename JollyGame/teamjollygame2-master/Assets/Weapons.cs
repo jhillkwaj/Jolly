@@ -144,7 +144,7 @@ public class Weapons : MonoBehaviour {
             float moveOne = (HeroControllerOne.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
             float moveTwo = (HeroControllerTwo.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
             float moveThree = (HeroControllerThree.FireBig ? (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 6.0f) * Time.deltaTime) : this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + Mathf.Clamp(moveOne + moveTwo + moveThree, -14.25f, 14.25f), 0);
+            this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(this.transform.position.y + moveOne + moveTwo + moveThree, -14.25f, 14.25f), 0);
         }
 
         if (!HeroControllerOne.FireBig && (this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
@@ -232,33 +232,25 @@ public class Weapons : MonoBehaviour {
         if (HeroControllerTwo.FireBig && bigLaserTime < 0)
         {
             if (chargeTime2 == timeToCharge)
-            {
                 chargeParticles2.Play();
-                chargeSound2.Play();
-            }
             chargeTime2 -= Time.deltaTime;
         }
         else
         {
             chargeTime2 = timeToCharge;
             chargeParticles2.Stop();
-            chargeSound2.Stop();
         }
 
         if (HeroControllerThree.FireBig && bigLaserTime < 0)
         {
             if (chargeTime3 == timeToCharge)
-            {
                 chargeParticles3.Play();
-                chargeSound3.Play();
-            }
             chargeTime3 -= Time.deltaTime;
         }
         else
         {
             chargeTime3 = timeToCharge;
             chargeParticles3.Stop();
-            chargeSound3.Stop();
         }
 
         if (bigLaserTime < 0)
