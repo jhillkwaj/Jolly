@@ -27,6 +27,6 @@ public class SpawnShot : MonoBehaviour {
     {
         GameObject shot = Instantiate(Resources.Load("shot"), this.transform.position, this.transform.rotation) as GameObject;
 
-        shot.GetComponent<MoveLaser>().velocity = Vector3.right * 10;
+        shot.GetComponent<MoveLaser>().velocity = Vector3.right * 30;
     }
 }

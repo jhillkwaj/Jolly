@@ -1,19 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BossHealth : MonoBehaviour {
 
     public int startingHealth = 1000;
     public int currentHealth;
+    public Slider healthSlider;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         currentHealth = startingHealth;
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
     void OnTriggerEnter2D(Collider2D other)
@@ -34,7 +35,7 @@ public class BossHealth : MonoBehaviour {
     void takeDamage(int damage)
     {
         currentHealth -= damage;
-
+        healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
             die();
@@ -44,5 +45,6 @@ public class BossHealth : MonoBehaviour {
     void die()
     {
         Destroy(gameObject);
+        
     }
 }
