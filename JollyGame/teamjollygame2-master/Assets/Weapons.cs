@@ -50,6 +50,7 @@ public class Weapons : MonoBehaviour {
     public AudioSource chargeSound1;
     public AudioSource chargeSound2;
     public AudioSource chargeSound3;
+    public AudioSource bigLaserSound;
 
     public ParticleSystem bigLaser;
     public GameObject gitLaserObj;
@@ -251,6 +252,7 @@ public class Weapons : MonoBehaviour {
             else if (charged1 || charged2 && charged3)
             {
                 bigLaser.Play();
+                bigLaserSound.Play();
                 chargeParticles1.Stop();
                 chargeParticles1.Clear();
                 chargeParticles2.Stop();

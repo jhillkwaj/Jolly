@@ -10562,7 +10562,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 770310559}
 --- !u!82 &797823850 stripped
 AudioSource:
-  m_PrefabParentObject: {fileID: 8228296, guid: fc9b703e02805cf4aa115469fff14a47,
+  m_PrefabParentObject: {fileID: 8285228, guid: fc9b703e02805cf4aa115469fff14a47,
     type: 2}
   m_PrefabInternal: {fileID: 1173047243}
 --- !u!1 &865661653
@@ -12168,35 +12168,35 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1889159917}
     m_Modifications:
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+    - target: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
@@ -12240,7 +12240,7 @@ RectTransform:
   m_Pivot: {x: 0, y: 1}
 --- !u!4 &1225753223 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 449594, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
+  m_PrefabParentObject: {fileID: 427442, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
   m_PrefabInternal: {fileID: 1173047243}
 --- !u!1 &1384065497
 GameObject:
@@ -14653,7 +14653,7 @@ Transform:
   m_RootOrder: 0
 --- !u!82 &1715180698 stripped
 AudioSource:
-  m_PrefabParentObject: {fileID: 8298526, guid: fc9b703e02805cf4aa115469fff14a47,
+  m_PrefabParentObject: {fileID: 8293672, guid: fc9b703e02805cf4aa115469fff14a47,
     type: 2}
   m_PrefabInternal: {fileID: 1173047243}
 --- !u!1 &1718550501
@@ -17073,6 +17073,7 @@ MonoBehaviour:
   chargeSound1: {fileID: 797823850}
   chargeSound2: {fileID: 1715180698}
   chargeSound3: {fileID: 2089410432}
+  bigLaserSound: {fileID: 0}
   bigLaser: {fileID: 1851433647}
   gitLaserObj: {fileID: 1891381613}
   indicatorArray:
@@ -18993,7 +18994,7 @@ PolygonCollider2D:
       - {x: .875, y: -3.2650001}
 --- !u!82 &2089410432 stripped
 AudioSource:
-  m_PrefabParentObject: {fileID: 8239214, guid: fc9b703e02805cf4aa115469fff14a47,
+  m_PrefabParentObject: {fileID: 8253752, guid: fc9b703e02805cf4aa115469fff14a47,
     type: 2}
   m_PrefabInternal: {fileID: 1173047243}
 --- !u!1 &2112244885
