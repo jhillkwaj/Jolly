@@ -2665,7 +2665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!82 &184955703 stripped
 AudioSource:
-  m_PrefabParentObject: {fileID: 8260574, guid: bb3bece05fba83644ba72461ab7a3395,
+  m_PrefabParentObject: {fileID: 8251992, guid: bb3bece05fba83644ba72461ab7a3395,
     type: 2}
   m_PrefabInternal: {fileID: 527459648}
 --- !u!1 &292869902
@@ -3925,10 +3925,6 @@ Prefab:
     - target: {fileID: 438728, guid: bb3bece05fba83644ba72461ab7a3395, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8260574, guid: bb3bece05fba83644ba72461ab7a3395, type: 2}
-      propertyPath: m_Volume
-      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb3bece05fba83644ba72461ab7a3395, type: 2}
@@ -6378,18 +6374,6 @@ Prefab:
     - target: {fileID: 470554, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 470554, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 470554, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 470554, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc9b703e02805cf4aa115469fff14a47, type: 2}
@@ -10037,6 +10021,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .800000012
       objectReference: {fileID: 0}
+    - target: {fileID: 183276, guid: 21afadf4f9d40e54495ac0c3d1e1c17e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21afadf4f9d40e54495ac0c3d1e1c17e, type: 2}
   m_IsPrefabParent: 0
@@ -11464,6 +11452,7 @@ MonoBehaviour:
   die: {fileID: 2025281589}
   removeOnDie: {fileID: 2058618885}
   winText: {fileID: 563598930}
+  hitSound: {fileID: 1748238718}
   death: 0
 --- !u!1 &1516373204
 GameObject:
@@ -14889,6 +14878,11 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!82 &1748238718 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8260574, guid: bb3bece05fba83644ba72461ab7a3395,
+    type: 2}
+  m_PrefabInternal: {fileID: 527459648}
 --- !u!1 &1795733558
 GameObject:
   m_ObjectHideFlags: 0
@@ -16279,6 +16273,7 @@ MonoBehaviour:
   hideOnDeath: {fileID: 2051563302}
   healthSliderObj: {fileID: 865661653}
   winObj: {fileID: 183920577}
+  hitSound: {fileID: 2089722217}
 --- !u!1 &1891381613
 GameObject:
   m_ObjectHideFlags: 0
@@ -19233,6 +19228,11 @@ PolygonCollider2D:
       - {x: .605000019, y: -3.66499996}
       - {x: .694999993, y: -3.58500004}
       - {x: .875, y: -3.2650001}
+--- !u!82 &2089722217 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8239248, guid: fc9b703e02805cf4aa115469fff14a47,
+    type: 2}
+  m_PrefabInternal: {fileID: 799120292}
 --- !u!1 &2112244885
 GameObject:
   m_ObjectHideFlags: 0
