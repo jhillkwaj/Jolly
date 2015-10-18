@@ -230,7 +230,10 @@ public class Weapons : MonoBehaviour {
         if (HeroControllerTwo.FireBig && bigLaserTime < 0)
         {
             if (chargeTime2 == timeToCharge)
+            {
                 chargeParticles2.Play();
+                chargeSound2.Play();
+            }
             chargeTime2 -= Time.deltaTime;
         }
         else
@@ -242,7 +245,10 @@ public class Weapons : MonoBehaviour {
         if (HeroControllerThree.FireBig && bigLaserTime < 0)
         {
             if (chargeTime3 == timeToCharge)
+            {
                 chargeParticles3.Play();
+                chargeSound3.Play();
+            }
             chargeTime3 -= Time.deltaTime;
         }
         else
