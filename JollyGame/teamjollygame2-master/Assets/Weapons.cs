@@ -30,9 +30,9 @@ public class Weapons : MonoBehaviour {
     double chargeTime2 = 0;
     double chargeTime3 = 0;
 
-    Vector2 lastRot1 = new Vector2(0, 0);
-    Vector2 lastRot2 = new Vector2(0, 0);
-    Vector2 lastRot3 = new Vector2(0, 0);
+    Vector2 lastRot1 = new Vector2(-1, 0);
+    Vector2 lastRot2 = new Vector2(-1, 0);
+    Vector2 lastRot3 = new Vector2(-1, 0);
 
     public float maxVSpeed = 6.0f;
 
@@ -45,6 +45,8 @@ public class Weapons : MonoBehaviour {
     public ParticleSystem chargeParticles3;
 
     public ParticleSystem bigLaser;
+
+    public GameObject gitLaserObj;
 
 
     // Use this for initialization
@@ -183,6 +185,7 @@ public class Weapons : MonoBehaviour {
                 bigLaser.Stop();
                 bigLaserTime = bigLaserCooldown;
                 bigLaserOn = false;
+                gitLaserObj.SetActive(false);
             }
             else if (charged1 && charged2 && charged3)
             {
@@ -195,6 +198,7 @@ public class Weapons : MonoBehaviour {
                 chargeParticles3.Clear();
                 bigLaserTime = 2.5f;
                 bigLaserOn = true;
+                gitLaserObj.SetActive(true);
             }
         }
             
