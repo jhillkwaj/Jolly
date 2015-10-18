@@ -165,7 +165,7 @@ public class Weapons : MonoBehaviour {
             nextShotOne = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 14;
+            shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 12;
             turretSound1.Play();
         }
 
@@ -187,7 +187,7 @@ public class Weapons : MonoBehaviour {
             nextShotTwo = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 14;
+            shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 12;
             turretSound2.Play();
         }
 
@@ -209,7 +209,7 @@ public class Weapons : MonoBehaviour {
             nextShotThree = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 14;
+            shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 12;
             turretSound3.Play();
         }
 

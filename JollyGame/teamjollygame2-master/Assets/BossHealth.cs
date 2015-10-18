@@ -34,7 +34,7 @@ public class BossHealth : MonoBehaviour {
     {
         if (other.gameObject.tag == "HeroShot")
         {
-            takeDamage(10);
+            takeDamage(15);
             Destroy(other.gameObject);
             hitSound.Play();
 
