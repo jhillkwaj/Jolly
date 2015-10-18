@@ -47,6 +47,10 @@ public class Weapons : MonoBehaviour {
     public ParticleSystem chargeParticles2;
     public ParticleSystem chargeParticles3;
 
+    public AudioSource chargeSound1;
+    public AudioSource chargeSound2;
+    public AudioSource chargeSound3;
+
     public ParticleSystem bigLaser;
     public GameObject gitLaserObj;
     public GameObject[] indicatorArray;
@@ -192,13 +196,17 @@ public class Weapons : MonoBehaviour {
         if (HeroControllerOne.FireBig && bigLaserTime < 0)
         {
             if (chargeTime1 == timeToCharge)
+            {
                 chargeParticles1.Play();
+                chargeSound1.Play();
+            }
             chargeTime1 -= Time.deltaTime;
         }
         else
         {
             chargeTime1 = timeToCharge;
             chargeParticles1.Stop();
+            chargeSound1.Stop();
         }
 
         if (HeroControllerTwo.FireBig && bigLaserTime < 0)

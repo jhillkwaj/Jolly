@@ -18,6 +18,11 @@ public class pitchShift : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!tone.isPlaying)
+        {
+            currentPitch = startingPitch;
+            return;
+        }
         currentPitch += rateOfChange * currentPitch * (1.0f - currentPitch/maxPitch) * Time.deltaTime;
         tone.pitch = currentPitch;
         float ratio = currentPitch / maxPitch;
