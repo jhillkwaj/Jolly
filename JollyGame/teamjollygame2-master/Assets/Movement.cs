@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.position = new Vector3(this.transform.position.x + (this.HeroController.HorizontalMovementAxis * maxHSpeed * Time.deltaTime)
-            , this.transform.position.y + (this.HeroController.VerticalMovementAxis * maxVSpeed * Time.deltaTime), 0);
+        this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x + (this.HeroController.HorizontalMovementAxis * maxHSpeed * Time.deltaTime),-27.0f,6.0f)
+            , Mathf.Clamp(this.transform.position.y + (this.HeroController.VerticalMovementAxis * maxVSpeed * Time.deltaTime),-15.0f,15.0f), 0);
     }
 }
