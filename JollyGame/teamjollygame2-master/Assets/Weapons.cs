@@ -45,8 +45,9 @@ public class Weapons : MonoBehaviour {
     public ParticleSystem chargeParticles3;
 
     public ParticleSystem bigLaser;
-
     public GameObject gitLaserObj;
+    public GameObject[] indicatorArray;
+
 
 
     // Use this for initialization
@@ -67,6 +68,53 @@ public class Weapons : MonoBehaviour {
         nextShotTwo -= Time.deltaTime;
         nextShotThree -= Time.deltaTime;
         bigLaserTime -= Time.deltaTime;
+
+        if(this.HeroControllerThree.VerticalMovementAxis > 0)
+        {
+            indicatorArray[0].GetComponent<SpriteRenderer>().color = new Color(123/255f, 231/255f, 51/255f);
+            indicatorArray[1].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85/255f);
+        }
+        else if (this.HeroControllerThree.VerticalMovementAxis < 0)
+        {
+            indicatorArray[1].GetComponent<SpriteRenderer>().color = new Color(123 / 255f, 231 / 255f, 51 / 255f);
+            indicatorArray[0].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        } else
+        {
+            indicatorArray[0].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+            indicatorArray[1].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+
+        if (this.HeroControllerOne.VerticalMovementAxis > 0)
+        {
+            indicatorArray[2].GetComponent<SpriteRenderer>().color = new Color(250 / 255f, 90 / 255f, 90 / 255f);
+            indicatorArray[3].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+        else if (this.HeroControllerOne.VerticalMovementAxis < 0)
+        {
+            indicatorArray[3].GetComponent<SpriteRenderer>().color = new Color(250 / 255f, 90 / 255f, 90 / 255f);
+            indicatorArray[2].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+        else
+        {
+            indicatorArray[2].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+            indicatorArray[3].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+
+        if (this.HeroControllerTwo.VerticalMovementAxis > 0)
+        {
+            indicatorArray[4].GetComponent<SpriteRenderer>().color = new Color(255f / 255f, 204 / 255f, 0 / 255f);
+            indicatorArray[5].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+        else if (this.HeroControllerTwo.VerticalMovementAxis < 0)
+        {
+            indicatorArray[5].GetComponent<SpriteRenderer>().color = new Color(255f / 255f, 204 / 255f, 0 / 255f);
+            indicatorArray[4].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
+        else
+        {
+            indicatorArray[4].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+            indicatorArray[5].GetComponent<SpriteRenderer>().color = new Color(74 / 255f, 60 / 255f, 85 / 255f);
+        }
 
         //move the ship
         if (!bigLaserOn && !HeroControllerOne.FireBig && !HeroControllerTwo.FireBig && !HeroControllerThree.FireBig)
