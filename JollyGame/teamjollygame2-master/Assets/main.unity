@@ -6344,6 +6344,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770310559}
+--- !u!1 &770762470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 770762471}
+  - 114: {fileID: 770762472}
+  m_Layer: 0
+  m_Name: FirePointOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770762471
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770762470}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 2.6493237, y: 5.26837063, z: .00410029897}
+  m_LocalScale: {x: .504633307, y: .504633307, z: .504633248}
+  m_Children: []
+  m_Father: {fileID: 2051563303}
+  m_RootOrder: 5
+--- !u!114 &770762472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770762470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4732d988151dfac4a973ca27d2ab952a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1486187055}
+  fireTime: 6
 --- !u!1001 &799120292
 Prefab:
   m_ObjectHideFlags: 0
@@ -6482,6 +6523,47 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &874084140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 874084141}
+  - 114: {fileID: 874084142}
+  m_Layer: 0
+  m_Name: FirePointTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &874084141
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874084140}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: -2.58876896, y: 5.2683692, z: .00410029897}
+  m_LocalScale: {x: .504633307, y: .504633307, z: .504633248}
+  m_Children: []
+  m_Father: {fileID: 2051563303}
+  m_RootOrder: 6
+--- !u!114 &874084142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874084140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4732d988151dfac4a973ca27d2ab952a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1486187055}
+  fireTime: 6
 --- !u!1 &896489552
 GameObject:
   m_ObjectHideFlags: 0
@@ -11589,7 +11671,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549066043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.7800007, y: .140000001, z: 20.3199997}
+  m_LocalPosition: {x: 18.5699997, y: .140000001, z: 20.3199997}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1889159917}
@@ -16229,7 +16311,7 @@ MonoBehaviour:
   fireTwo: {fileID: 339321763}
   fireThree: {fileID: 550082942}
   overheatingEffect: {fileID: 2112244887}
-  shotTime: .40000000000000002
+  shotTime: .5
   timeToCharge: 3
   maxVSpeed: 6
   bigLaserCooldown: 5
@@ -18808,6 +18890,8 @@ Transform:
   - {fileID: 1014281849}
   - {fileID: 1851433646}
   - {fileID: 415581173}
+  - {fileID: 770762471}
+  - {fileID: 874084141}
   m_Father: {fileID: 1889159917}
   m_RootOrder: 1
 --- !u!212 &2051563304

@@ -39,6 +39,12 @@ public class Slow : MonoBehaviour
             die.SetActive(true);
             winText.SetActive(true);
         }
+        else if (other.gameObject.tag == "Stun")
+        {
+            Destroy(other.gameObject);
+            movementScript.maxVSpeed = 0;
+            movementScript.maxHSpeed = 0;
+        }
     }
 
     void Update()
