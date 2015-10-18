@@ -11,6 +11,7 @@ public class Slow : MonoBehaviour
 
     public GameObject die;
     public GameObject removeOnDie;
+    public GameObject winText;
 
     public bool death = false;
 
@@ -29,10 +30,11 @@ public class Slow : MonoBehaviour
             Destroy(other.gameObject);
             movementScript.maxVSpeed = movementScript.maxVSpeed / 2;
             movementScript.maxHSpeed = movementScript.maxHSpeed / 2;
-        }else if(other.gameObject.tag == "BigShot" || death == true)
+        } else if (other.gameObject.tag == "BigShot" || death == true)
         {
             removeOnDie.SetActive(false);
             die.SetActive(true);
+            winText.SetActive(true);
         }
     }
 
