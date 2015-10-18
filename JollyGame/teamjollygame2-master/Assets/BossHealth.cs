@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BossHealth : MonoBehaviour {
 
     public int startingHealth = 1000;
     public int currentHealth;
-
+    public Slider healthSlider;
     public GameObject showOnDeath;
 
     bool inDeath = false;
@@ -41,7 +42,7 @@ public class BossHealth : MonoBehaviour {
     void takeDamage(int damage)
     {
         currentHealth -= damage;
-
+        healthSlider.value = currentHealth;
         if (currentHealth <= 0 && !inDeath)
         {
             showOnDeath.SetActive(true);
