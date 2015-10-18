@@ -29,7 +29,7 @@ public class Weapons : MonoBehaviour {
     public float bigLaserCooldown;
     float bigLaserTime = 0;
     bool bigLaserOn = false;
-    public GameObject bigLaser;
+    public ParticleSystem bigLaser;
 
     // Use this for initialization
     void Start () {
@@ -121,13 +121,13 @@ public class Weapons : MonoBehaviour {
         {
             if(bigLaserOn)
             {
-                bigLaser.SetActive(false);
+                bigLaser.Stop();
                 bigLaserTime = bigLaserCooldown;
                 bigLaserOn = false;
             }
-            else if(HeroControllerOne.FireBig && HeroControllerTwo.FireBig && HeroControllerThree.FireBig)
+            else if(HeroControllerOne.FireBig && HeroControllerTwo.FireBig && HeroControllerThree.FireBig || HeroControllerOne.FireBig)
             {
-                bigLaser.SetActive(true);
+                bigLaser.Play();
                 bigLaserTime = 2;
                 bigLaserOn = true;
             }
