@@ -24,6 +24,10 @@ public class Weapons : MonoBehaviour {
     double nextShotTwo = -1;
     double nextShotThree = -1;
 
+    Vector2 lastRot1 = new Vector2(0, 0);
+    Vector2 lastRot2 = new Vector2(0, 0);
+    Vector2 lastRot3 = new Vector2(0, 0);
+
     public float maxVSpeed = 6.0f;
 
     public float bigLaserCooldown;
@@ -57,64 +61,64 @@ public class Weapons : MonoBehaviour {
         if (!HeroControllerOne.FireBig && (this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerOne.RightAxisX, HeroControllerOne.RightAxisY);
+            lastRot1 = vector;
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
             if (vector.y < 0)
             {
                 angle = -angle;
-                Debug.Log("fix");
             }
             angle += 90;
             turretOne.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
-            if (nextShotOne <= 0 && HeroControllerOne.Fire)
-            {
-                nextShotOne = shotTime;
-                //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
-                shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
-            }
+        if (nextShotOne <= 0 && HeroControllerOne.Fire)
+        {
+            nextShotOne = shotTime;
+            //fire the shot
+            GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
+            shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 10;
         }
 
         if (!HeroControllerTwo.FireBig && (this.HeroControllerTwo.RightAxisX != 0 || this.HeroControllerTwo.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerTwo.RightAxisX, HeroControllerTwo.RightAxisY);
+            lastRot2 = vector;
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
             if (vector.y < 0)
             {
                 angle = -angle;
-                Debug.Log("fix");
             }
             angle += 90;
             turretTwo.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
-            if (nextShotTwo <= 0 && HeroControllerTwo.Fire)
-            {
-                nextShotTwo = shotTime;
-                //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
-                shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
-            }
+        if (nextShotTwo <= 0 && HeroControllerTwo.Fire)
+        {
+            nextShotTwo = shotTime;
+            //fire the shot
+            GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
+            shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 10;
         }
 
         if (!HeroControllerThree.FireBig && (this.HeroControllerThree.RightAxisX != 0 || this.HeroControllerThree.RightAxisY != 0))
         {
             Vector2 vector = new Vector2(HeroControllerThree.RightAxisX, HeroControllerThree.RightAxisY);
+            lastRot3 = vector;
             float angle = Vector2.Angle(Vector2.right, vector); //set the rotation of the turret to angle
             if (vector.y < 0)
             {
                 angle = -angle;
-                Debug.Log("fix");
             }
             angle += 90;
             turretThree.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
-            if (nextShotThree <= 0 && HeroControllerThree.Fire)
-            {
-                nextShotThree = shotTime;
-                //fire the shot
-                GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
-                shot.GetComponent<MoveLaser>().velocity = vector.normalized * 10;
-            }
+        if (nextShotThree <= 0 && HeroControllerThree.Fire)
+        {
+            nextShotThree = shotTime;
+            //fire the shot
+            GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
+            shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 10;
         }
 
         if (bigLaserTime < 0)
