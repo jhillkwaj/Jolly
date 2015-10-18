@@ -87,6 +87,16 @@ public class AdjustCamera : MonoBehaviour {
 
             camera.rect = rect;
         }
+
+       
+    }
+
+    void Update()
+    {
+        if(Input.GetAxis("Cancel")>0)
+        {
+            Application.Quit();
+        }
     }
 
 
