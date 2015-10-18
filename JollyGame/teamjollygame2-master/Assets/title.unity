@@ -1605,7 +1605,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: G A M E    N A M E
+  m_Text: S T A R    B O S S
 --- !u!222 &1838685771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1627,5 +1627,5 @@ RectTransform:
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
   m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 465.799988, y: 81.3000031}
+  m_SizeDelta: {x: 495, y: 80}
   m_Pivot: {x: .5, y: 1}
