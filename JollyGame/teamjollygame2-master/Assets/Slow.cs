@@ -21,7 +21,7 @@ public class Slow : MonoBehaviour
 
         if (other.gameObject.tag == "BossShot")
         {
-            Destroy(other);
+            Destroy(other.gameObject);
             movementScript.maxVSpeed = movementScript.maxVSpeed / 2;
             movementScript.maxHSpeed = movementScript.maxHSpeed / 2;
         }else if(other.gameObject.tag == "BigShot")
