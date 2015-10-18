@@ -13,6 +13,8 @@ public class Slow : MonoBehaviour
     public GameObject removeOnDie;
     public GameObject winText;
 
+    public AudioSource hitSound;
+
     public bool death = false;
 
     void Start()
@@ -30,6 +32,7 @@ public class Slow : MonoBehaviour
             Destroy(other.gameObject);
             movementScript.maxVSpeed = movementScript.maxVSpeed / 2.5f;
             movementScript.maxHSpeed = movementScript.maxHSpeed / 2.5f;
+            hitSound.Play();
         } else if (other.gameObject.tag == "BigShot" || death == true)
         {
             removeOnDie.SetActive(false);
