@@ -30,8 +30,8 @@ public class Slow : MonoBehaviour
         if (other.gameObject.tag == "BossShot")
         {
             Destroy(other.gameObject);
-            movementScript.maxVSpeed = movementScript.maxVSpeed / 2.5f;
-            movementScript.maxHSpeed = movementScript.maxHSpeed / 2.5f;
+            movementScript.maxVSpeed = movementScript.maxVSpeed / 1.8f;
+            movementScript.maxHSpeed = movementScript.maxHSpeed / 1.8f;
             hitSound.Play();
         } else if (other.gameObject.tag == "BigShot" || death == true)
         {
