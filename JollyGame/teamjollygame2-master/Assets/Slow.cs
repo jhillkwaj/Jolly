@@ -44,6 +44,7 @@ public class Slow : MonoBehaviour
             Destroy(other.gameObject);
             movementScript.maxVSpeed = 0;
             movementScript.maxHSpeed = 0;
+            hitSound.Play();
         }
     }
 
