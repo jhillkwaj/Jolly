@@ -11,7 +11,6 @@ public class Slow : MonoBehaviour
 
     public GameObject die;
     public GameObject removeOnDie;
-    public GameObject winObj;
 
     public bool death = false;
 
@@ -34,7 +33,6 @@ public class Slow : MonoBehaviour
         {
             removeOnDie.SetActive(false);
             die.SetActive(true);
-            winObj.SetActive(true);
         }
     }
 
