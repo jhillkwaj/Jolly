@@ -13,6 +13,8 @@ public class BossHealth : MonoBehaviour {
     public GameObject healthSliderObj;
     public GameObject winObj;
 
+    public AudioSource hitSound;
+
     bool inDeath = false;
     float deathTime = -1;
 
@@ -36,7 +38,7 @@ public class BossHealth : MonoBehaviour {
             Destroy(other.gameObject);
         }
 
-        //play impact sound effect
+        hitSound.Play();
 
         //impact particle effect
 
