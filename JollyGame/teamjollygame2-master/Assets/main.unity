@@ -1216,10 +1216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotTime: 1
---- !u!4 &1699457056 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 430124, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
-  m_PrefabInternal: {fileID: 1851433645}
 --- !u!1 &1820887881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1373,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 157842, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430124, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
@@ -1480,6 +1480,7 @@ MonoBehaviour:
   chargeParticles2: {fileID: 1851433649}
   chargeParticles3: {fileID: 1851433648}
   bigLaser: {fileID: 1851433647}
+  gitLaserObj: {fileID: 1891381613}
 --- !u!50 &1889159921
 Rigidbody2D:
   serializedVersion: 2
@@ -1528,19 +1529,19 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1891381614
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1891381613}
-  m_LocalRotation: {x: .500000119, y: .49999997, z: -.5, w: .49999994}
-  m_LocalPosition: {x: -.200000003, y: 0, z: 30.7000008}
-  m_LocalScale: {x: 66.0212555, y: 2.03749847, z: 1}
+  m_LocalRotation: {x: 1.49011612e-08, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.54499972, y: .0300000887, z: -0}
+  m_LocalScale: {x: 3.30106282, y: .101874925, z: .0500000007}
   m_Children: []
-  m_Father: {fileID: 1699457056}
-  m_RootOrder: 0
+  m_Father: {fileID: 1851433646}
+  m_RootOrder: 3
 --- !u!61 &1891381615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2026,7 +2027,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2058618885}
   m_LocalRotation: {x: 0, y: 0, z: .70710659, w: -.707106948}
-  m_LocalPosition: {x: .0909999982, y: -.0659999996, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .0865821093, y: .0865821093, z: .0865821093}
   m_Children:
   - {fileID: 753249535}

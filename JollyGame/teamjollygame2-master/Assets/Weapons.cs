@@ -46,6 +46,8 @@ public class Weapons : MonoBehaviour {
 
     public ParticleSystem bigLaser;
 
+    public GameObject gitLaserObj;
+
 
     // Use this for initialization
     void Start () {
@@ -183,6 +185,7 @@ public class Weapons : MonoBehaviour {
                 bigLaser.Stop();
                 bigLaserTime = bigLaserCooldown;
                 bigLaserOn = false;
+                gitLaserObj.SetActive(false);
             }
             else if (charged1 && charged2 && charged3)
             {
@@ -195,6 +198,7 @@ public class Weapons : MonoBehaviour {
                 chargeParticles3.Clear();
                 bigLaserTime = 2.5f;
                 bigLaserOn = true;
+                gitLaserObj.SetActive(true);
             }
         }
             
