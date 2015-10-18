@@ -85,6 +85,33 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1727904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1727905}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1727905
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727904}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 0, y: -4.25, z: 0}
+  m_LocalScale: {x: 2.37026834, y: 1.61123693, z: .0500000007}
+  m_Children: []
+  m_Father: {fileID: 1820887882}
+  m_RootOrder: 0
 --- !u!1 &46875536
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +198,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &339321763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 339321764}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &339321764
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339321763}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 0, y: -4.25, z: 0}
+  m_LocalScale: {x: 2.37026834, y: 1.61123693, z: .0500000007}
+  m_Children: []
+  m_Father: {fileID: 1014281849}
+  m_RootOrder: 0
 --- !u!1 &550082942
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550082942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 911954187}
@@ -403,7 +457,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106709}
   m_LocalPosition: {x: .276899993, y: -.370900005, z: 0}
   m_LocalScale: {x: .0310320649, y: .0210946612, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 339321764}
   m_Father: {fileID: 1889159917}
   m_RootOrder: 3
 --- !u!114 &1014281850
@@ -646,7 +701,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106709}
   m_LocalPosition: {x: .442600012, y: .0403000005, z: 0}
   m_LocalScale: {x: .0310320649, y: .0210946612, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1727905}
   m_Father: {fileID: 1889159917}
   m_RootOrder: 2
 --- !u!212 &1820887883
@@ -821,9 +877,9 @@ MonoBehaviour:
   turretOne: {fileID: 1820887881}
   turretTwo: {fileID: 1014281847}
   turretThree: {fileID: 911954186}
-  fireOne: {fileID: 0}
-  fireTwo: {fileID: 0}
-  fireThree: {fileID: 0}
+  fireOne: {fileID: 1727904}
+  fireTwo: {fileID: 339321763}
+  fireThree: {fileID: 550082942}
   shotTime: .5
   maxVSpeed: 6
   bigLaserCooldown: 5
