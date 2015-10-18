@@ -5,6 +5,7 @@ public class SpawnShot : MonoBehaviour {
 
     public double shotTime;
     double nextShot = -1;
+    public AudioSource fireSound;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class SpawnShot : MonoBehaviour {
         {
             fireShot();
             nextShot += shotTime;
+            fireSound.Play();
         }
 	}
 

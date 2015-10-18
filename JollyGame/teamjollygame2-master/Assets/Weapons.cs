@@ -51,6 +51,9 @@ public class Weapons : MonoBehaviour {
     public AudioSource chargeSound2;
     public AudioSource chargeSound3;
     public AudioSource bigLaserSound;
+    public AudioSource turretSound1;
+    public AudioSource turretSound2;
+    public AudioSource turretSound3;
 
     public ParticleSystem bigLaser;
     public GameObject gitLaserObj;
@@ -150,6 +153,7 @@ public class Weapons : MonoBehaviour {
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
             shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 10;
+            turretSound1.Play();
         }
 
         if (!HeroControllerTwo.FireBig && (this.HeroControllerTwo.RightAxisX != 0 || this.HeroControllerTwo.RightAxisY != 0))
@@ -171,6 +175,7 @@ public class Weapons : MonoBehaviour {
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
             shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 10;
+            turretSound2.Play();
         }
 
         if (!HeroControllerThree.FireBig && (this.HeroControllerThree.RightAxisX != 0 || this.HeroControllerThree.RightAxisY != 0))
@@ -192,6 +197,7 @@ public class Weapons : MonoBehaviour {
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
             shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 10;
+            turretSound3.Play();
         }
 
         if (HeroControllerOne.FireBig && bigLaserTime < 0)
