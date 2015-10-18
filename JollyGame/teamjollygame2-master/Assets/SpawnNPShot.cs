@@ -19,7 +19,7 @@ public class SpawnNPShot : MonoBehaviour {
 
     void fire()
     {
-        GameObject shot = Instantiate(Resources.Load("Shot NP"), this.transform.position, this.transform.rotation) as GameObject;
+        GameObject shot = Instantiate(Resources.Load("Shot NP"), this.transform.position + new Vector3(0,0,10), this.transform.rotation) as GameObject;
 
         shot.GetComponent<MoveLaser>().velocity = Vector3.Normalize((target.transform.position + (Random.insideUnitSphere*10)) - this.transform.position) * 5;
     }
