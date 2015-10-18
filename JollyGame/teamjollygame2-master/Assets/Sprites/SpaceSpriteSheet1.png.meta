@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a8ecef76f55ea63448d3b7ee2cadd7ac
-timeCreated: 1445119467
+timeCreated: 1445128210
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -83,11 +83,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1082
-        y: 1573
+        y: 1575
         width: 82
         height: 460
       alignment: 9
-      pivot: {x: .50000149, y: .936021328}
+      pivot: {x: .5, y: .910869539}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BigShip_2
       rect:
