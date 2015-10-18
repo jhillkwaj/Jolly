@@ -2536,6 +2536,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1896d76cadecd9d4dbfc97ac19a515fb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &107258923 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173338, guid: 1896d76cadecd9d4dbfc97ac19a515fb, type: 2}
+  m_PrefabInternal: {fileID: 107258922}
 --- !u!1 &107725374
 GameObject:
   m_ObjectHideFlags: 0
@@ -16153,6 +16157,10 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 19870288, guid: ba315a0bfb2af2b49a5b9d55b7a3c670,
     type: 2}
   m_PrefabInternal: {fileID: 1851433645}
+--- !u!1 &1851433651 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 164944, guid: ba315a0bfb2af2b49a5b9d55b7a3c670, type: 2}
+  m_PrefabInternal: {fileID: 1851433645}
 --- !u!1 &1889159916
 GameObject:
   m_ObjectHideFlags: 0
@@ -16221,7 +16229,7 @@ MonoBehaviour:
   fireTwo: {fileID: 339321763}
   fireThree: {fileID: 550082942}
   overheatingEffect: {fileID: 2112244887}
-  shotTime: .5
+  shotTime: .40000000000000002
   timeToCharge: 3
   maxVSpeed: 6
   bigLaserCooldown: 5
@@ -16276,7 +16284,14 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 865661655}
   showOnDeath: {fileID: 1393549355}
-  hideOnDeath: {fileID: 2051563302}
+  hideOnDeath:
+  - {fileID: 911954186}
+  - {fileID: 1820887881}
+  - {fileID: 1014281847}
+  - {fileID: 1851433651}
+  - {fileID: 107258923}
+  - {fileID: 2051563302}
+  - {fileID: 1889159916}
   healthSliderObj: {fileID: 865661653}
   winObj: {fileID: 183920577}
 --- !u!1 &1891381613

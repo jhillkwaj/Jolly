@@ -30,8 +30,8 @@ public class Slow : MonoBehaviour
         if (other.gameObject.tag == "BossShot")
         {
             Destroy(other.gameObject);
-            movementScript.maxVSpeed = movementScript.maxVSpeed / 2;
-            movementScript.maxHSpeed = movementScript.maxHSpeed / 2;
+            movementScript.maxVSpeed = movementScript.maxVSpeed / 2.5f;
+            movementScript.maxHSpeed = movementScript.maxHSpeed / 2.5f;
             hitSound.Play();
         } else if (other.gameObject.tag == "BigShot" || death == true)
         {
@@ -43,7 +43,7 @@ public class Slow : MonoBehaviour
 
     void Update()
     {
-        movementScript.maxHSpeed = Mathf.Lerp(movementScript.maxHSpeed, fullSpeedX, .1f * Time.deltaTime);
-        movementScript.maxVSpeed = Mathf.Lerp(movementScript.maxVSpeed, fullSpeedY, .1f * Time.deltaTime);
+        movementScript.maxHSpeed = Mathf.Lerp(movementScript.maxHSpeed, fullSpeedX, .08f * Time.deltaTime);
+        movementScript.maxVSpeed = Mathf.Lerp(movementScript.maxVSpeed, fullSpeedY, .08f * Time.deltaTime);
     }
 }

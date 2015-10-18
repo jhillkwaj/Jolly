@@ -139,11 +139,13 @@ public class Weapons : MonoBehaviour {
         }
 
         //move the ship
-        if (!bigLaserOn && !HeroControllerOne.FireBig && !HeroControllerTwo.FireBig && !HeroControllerThree.FireBig)
-            this.transform.position = new Vector3(this.transform.position.x
-                , Mathf.Clamp(this.transform.position.y + (this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed/3) * Time.deltaTime)
-                + (this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime)
-                + (this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime),-14.25f,14.25f), 0);
+        if (!bigLaserOn)
+        {
+            float moveOne = (HeroControllerOne.FireBig ? 0 : this.HeroControllerOne.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            float moveTwo = (HeroControllerTwo.FireBig ? 0 : this.HeroControllerTwo.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            float moveThree = (HeroControllerTwo.FireBig ? 0 : this.HeroControllerThree.VerticalMovementAxis * (maxVSpeed / 3) * Time.deltaTime);
+            this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(moveOne + moveTwo + moveThree, -14.25f, 14.25f), 0);
+        }
 
         if (!HeroControllerOne.FireBig && (this.HeroControllerOne.RightAxisX != 0 || this.HeroControllerOne.RightAxisY != 0))
         {
@@ -163,7 +165,7 @@ public class Weapons : MonoBehaviour {
             nextShotOne = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Red"), fireOne.transform.position, turretOne.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 10;
+            shot.GetComponent<MoveLaser>().velocity = lastRot1.normalized * 14;
             turretSound1.Play();
         }
 
@@ -185,7 +187,7 @@ public class Weapons : MonoBehaviour {
             nextShotTwo = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Yellow"), fireTwo.transform.position, turretTwo.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 10;
+            shot.GetComponent<MoveLaser>().velocity = lastRot2.normalized * 14;
             turretSound2.Play();
         }
 
@@ -207,7 +209,7 @@ public class Weapons : MonoBehaviour {
             nextShotThree = shotTime;
             //fire the shot
             GameObject shot = Instantiate(Resources.Load("Shot Green"), fireThree.transform.position, turretThree.transform.rotation) as GameObject;
-            shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 10;
+            shot.GetComponent<MoveLaser>().velocity = lastRot3.normalized * 14;
             turretSound3.Play();
         }
 
