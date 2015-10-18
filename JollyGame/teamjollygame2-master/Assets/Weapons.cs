@@ -232,25 +232,33 @@ public class Weapons : MonoBehaviour {
         if (HeroControllerTwo.FireBig && bigLaserTime < 0)
         {
             if (chargeTime2 == timeToCharge)
+            {
                 chargeParticles2.Play();
+                chargeSound2.Play();
+            }
             chargeTime2 -= Time.deltaTime;
         }
         else
         {
             chargeTime2 = timeToCharge;
             chargeParticles2.Stop();
+            chargeSound2.Stop();
         }
 
         if (HeroControllerThree.FireBig && bigLaserTime < 0)
         {
             if (chargeTime3 == timeToCharge)
+            {
                 chargeParticles3.Play();
+                chargeSound3.Play();
+            }
             chargeTime3 -= Time.deltaTime;
         }
         else
         {
             chargeTime3 = timeToCharge;
             chargeParticles3.Stop();
+            chargeSound3.Stop();
         }
 
         if (bigLaserTime < 0)
