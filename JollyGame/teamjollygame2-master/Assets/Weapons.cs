@@ -139,7 +139,7 @@ public class Weapons : MonoBehaviour {
             turretOne.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        if (nextShotOne <= 0 && HeroControllerOne.Fire)
+        if (!HeroControllerOne.FireBig && nextShotOne <= 0 && HeroControllerOne.Fire)
         {
             nextShotOne = shotTime;
             //fire the shot
@@ -160,7 +160,7 @@ public class Weapons : MonoBehaviour {
             turretTwo.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        if (nextShotTwo <= 0 && HeroControllerTwo.Fire)
+        if (!HeroControllerTwo.FireBig && nextShotTwo <= 0 && HeroControllerTwo.Fire)
         {
             nextShotTwo = shotTime;
             //fire the shot
@@ -181,7 +181,7 @@ public class Weapons : MonoBehaviour {
             turretThree.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        if (nextShotThree <= 0 && HeroControllerThree.Fire)
+        if (!HeroControllerThree.FireBig && nextShotThree <= 0 && HeroControllerThree.Fire)
         {
             nextShotThree = shotTime;
             //fire the shot
