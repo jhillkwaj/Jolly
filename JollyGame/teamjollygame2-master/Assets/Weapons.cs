@@ -30,9 +30,9 @@ public class Weapons : MonoBehaviour {
     double chargeTime2 = 0;
     double chargeTime3 = 0;
 
-    Vector2 lastRot1 = new Vector2(0, 0);
-    Vector2 lastRot2 = new Vector2(0, 0);
-    Vector2 lastRot3 = new Vector2(0, 0);
+    Vector2 lastRot1 = new Vector2(-1, 0);
+    Vector2 lastRot2 = new Vector2(-1, 0);
+    Vector2 lastRot3 = new Vector2(-1, 0);
 
     public float maxVSpeed = 6.0f;
 
