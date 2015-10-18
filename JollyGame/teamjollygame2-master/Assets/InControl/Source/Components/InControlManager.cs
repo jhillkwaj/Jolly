@@ -41,6 +41,7 @@ namespace InControl
 					var customProfileInstance = Activator.CreateInstance( classType ) as UnityInputDeviceProfile;
 					InputManager.AttachDevice( new UnityInputDevice( customProfileInstance ) );
 				}
+                
 			}
 
 			if (dontDestroyOnLoad)

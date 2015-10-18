@@ -2648,6 +2648,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 183920578}
+  - 114: {fileID: 183920580}
+  - 114: {fileID: 183920579}
   m_Layer: 0
   m_Name: Blue Wins
   m_TagString: Untagged
@@ -2670,6 +2672,29 @@ Transform:
   - {fileID: 1086602959}
   m_Father: {fileID: 1216031578}
   m_RootOrder: 1
+--- !u!114 &183920579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183920577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d906238c70e5243579e3b0ccc58b0bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNumber: 0
+--- !u!114 &183920580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183920577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5bae79192b76f4983971e96452c0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292869902
 GameObject:
   m_ObjectHideFlags: 0
@@ -7171,6 +7196,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 563598931}
+  - 114: {fileID: 563598933}
+  - 114: {fileID: 563598932}
   m_Layer: 0
   m_Name: Boss Wins
   m_TagString: Untagged
@@ -7193,6 +7220,29 @@ Transform:
   - {fileID: 1898949572}
   m_Father: {fileID: 1216031578}
   m_RootOrder: 2
+--- !u!114 &563598932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563598930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d906238c70e5243579e3b0ccc58b0bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNumber: 0
+--- !u!114 &563598933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563598930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5bae79192b76f4983971e96452c0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662175983
 GameObject:
   m_ObjectHideFlags: 0

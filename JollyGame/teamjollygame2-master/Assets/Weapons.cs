@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class Weapons : MonoBehaviour {
 
@@ -63,6 +64,16 @@ public class Weapons : MonoBehaviour {
         chargeTime1 = 0;
         chargeTime2 = 0;
         chargeTime3 = 0;
+
+        if(InputManager.Devices.Count == 2)
+        {
+            HeroControllerTwo = HeroControllerOne;
+            HeroControllerThree = HeroControllerOne;
+        }
+        if (InputManager.Devices.Count == 3)
+        {
+            HeroControllerThree = HeroControllerOne;
+        }
     }
 	
 	// Update is called once per frame
@@ -240,7 +251,7 @@ public class Weapons : MonoBehaviour {
                 bigLaserOn = false;
                 gitLaserObj.SetActive(false);
             }
-            else if (charged1 || charged2 && charged3)
+            else if (charged1 && charged2 && charged3)
             {
                 bigLaser.Play();
                 chargeParticles1.Stop();
