@@ -36,12 +36,12 @@ public class BossHealth : MonoBehaviour {
         {
             takeDamage(10);
             Destroy(other.gameObject);
+            hitSound.Play();
+
+            GameObject hitEffect = Instantiate(Resources.Load("HitParticles"), other.transform.position, other.transform.rotation) as GameObject;
+            hitEffect.transform.parent = transform;
+            Destroy(hitEffect, 3);
         }
-
-        hitSound.Play();
-
-        //impact particle effect
-
         
     }
 
