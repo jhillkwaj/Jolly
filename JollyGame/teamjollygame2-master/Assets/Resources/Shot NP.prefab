@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11446192}
   m_Layer: 0
   m_Name: Shot NP
-  m_TagString: Untagged
+  m_TagString: Stun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ GameObject:
   - 199: {fileID: 19952066}
   m_Layer: 0
   m_Name: particles
-  m_TagString: Stun
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.15550423, y: .122745931, z: 9.5546875}
+  m_LocalPosition: {x: 31.8385983, y: 4.11368179, z: 9.5546875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413844}
@@ -67,7 +67,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 130428}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 2.29477877e-08}
   serializedVersion: 2
