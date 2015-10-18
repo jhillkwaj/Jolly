@@ -16291,6 +16291,7 @@ MonoBehaviour:
   - {fileID: 1851433651}
   - {fileID: 107258923}
   - {fileID: 2051563302}
+  - {fileID: 1889159916}
   healthSliderObj: {fileID: 865661653}
   winObj: {fileID: 183920577}
 --- !u!1 &1891381613
