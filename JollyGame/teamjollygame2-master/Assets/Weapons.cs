@@ -240,6 +240,7 @@ public class Weapons : MonoBehaviour {
         {
             chargeTime2 = timeToCharge;
             chargeParticles2.Stop();
+            chargeSound2.Stop();
         }
 
         if (HeroControllerThree.FireBig && bigLaserTime < 0)
@@ -255,6 +256,7 @@ public class Weapons : MonoBehaviour {
         {
             chargeTime3 = timeToCharge;
             chargeParticles3.Stop();
+            chargeSound3.Stop();
         }
 
         if (bigLaserTime < 0)
